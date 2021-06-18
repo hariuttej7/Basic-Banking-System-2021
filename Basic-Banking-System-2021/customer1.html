@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SEND MONEY</title>
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+
+</head>
+
+<body>
+  <div class="container rounded bg-white mt-5">
+    <div class="row">
+      <div class="col-md-4 border-right">
+        <div class="my-info text-center">
+          <h2>Name: HARI UTTEJ</h2>
+          <h4>Net Bank Balance: $<span id="myAccountBalance">7000</span></h4>
+          <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+          <a class="btn btn-info" href="" data-toggle="modal" data-target="#transactionHistory">See All Transactions</a>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="input-group mb-3">
+                  <input type="text" id="enterName" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">@email.com</span>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount" aria-label="Amount (to the nearest dollar)">
+                  <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                Money</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal transaction History-->
+      <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ol id="transaction-history-body">
+
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class=" p-1">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex flex-row align-items-center back"><i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+              <a href="index.html">back to home</a>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="serial number"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="first name"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="email" placeholder="Email"></div>
+            <p class="formcss "> Bank balance(in $)</p>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="1."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="stefan"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="stefan@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="stefanBankBalance">2000 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="2."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="selena"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="selena@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="selenaBankBalance">6000 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="3."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="gaya"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="gaya@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="gayaBankBalance">4000 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="4."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="john"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="john@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="johnBankBalance">2300 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="5."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="maya"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="maya@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="mayaBankBalance">4400 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="6."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="rodge"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="rodge@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="rodgeBankBalance">35000 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="7."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="tyson"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="tyson@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="tysonBankBalance">1000 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="8."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="rashi"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="rasi@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="rashiBankBalance">8900 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="9."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="deepak"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="deepak@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="deepakBankBalance">200 </span></p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="serial number" value="10."></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" placeholder="first name" value="monique"></div>
+            <div class="col-md-3"><input type="text" readonly class="form-control" value="monique@gmail.com" placeholder="Email"></div>
+            <p class="formcss " <span id="moniqueBankBalance">2500 </span></p>
+          </div>
+
+
+        </div>
+      </div>
+
+      <script src="js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+      <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+
+</html>

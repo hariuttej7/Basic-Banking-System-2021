@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*          mainpart starts here     */
+.hero-image {
+  background-image: url("https://kaboompics.com/cache/9/c/7/a/a/9c7aac8f6060f67832e7a08acebe8314f69ba531.jpeg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  font: 700 3rem/1.2 proxima-nova, sans-serif;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: black;
+  font-size: 70px;
+}
+
+.hero-para {
+  font: 400 1.125em/1.6 proxima-nova, sans-serif;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  margin: 0;
+  color: black;
+  font-size: 30px;
+}
+
+/*       mainpart ends   here     */
+/*       firstpart starts   here     */
+.firstparttext {
+  position: absolute;
+  font: 400 1.125em/1.6 proxima-nova, sans-serif;
+  margin: 0;
+  text-align: left;
+  padding: 0;
+  left: 40px;
+  top: 45px;
+  font-size: 50px;
+}
+
+.img2 {
+  float: left;
+  width: 100%;
+  left: 20px;
+  padding: 0;
+  margin-top: 0;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+/*       firstpart ends   here     */
+/*       secondpart starts   here     */
+.secondparttext {
+  position: absolute;
+  font: 400 1.125em/1.6 proxima-nova, sans-serif;
+  text-align: left;
+  top: 45px;
+  left: 70px;
+  font-size: 50px;
+  margin: 0;
+}
+
+.img3 {
+  margin: 0;
+  padding: 0;
+  right: 20px;
+  width: 20%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+/*       secondpart ends   here     */
+/*       images resize   here     */
+.imageresize {
+  height: 500px;
+  object-fit: cover;
+}
+
+/*       images resize  ends here     */
+/*       buttons customization starts   here     */
+.get-started2 {
+  position: absolute;
+  top: 230px;
+  left: 80px;
+  font-size: 50px;
+}
+
+.get-started1 {
+  position: absolute;
+  display: inline-block;
+  top: 230px;
+  left: 45px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.get-started {
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 150%;
+  background-color: #fff;
+  color: #039be5 !important;
+  transition: 0.3s;
+}
+
+/*       buttons customization ends   here     */
+/*        footer starts here     */
+Footer {
+  background-color: #f2e9e4;
+}
+
+.social-icons li {
+  list-style: none;
+  display: inline;
+  padding: 0.5rem;
+}
+
+.github {
+  color: #24292e;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+/*        footer ends here     */
